@@ -21,6 +21,7 @@ DECLARE @SaldoMayor INT = 5000;
 SELECT * FROM Transacciones
 
 -----¿Cuántas cuentas tiene cada cliente?
-SELECT ClienteId, COUNT(*) AS NumeroCuentas
-	FROM Cuentas
-	GROUP BY ClienteId;
+SELECT cl.Nombre, COUNT(*) AS NumeroCuentas
+FROM Cuentas cu
+JOIN Clientes cl ON cu.ClienteId = cl.ClienteId
+GROUP BY cl.Nombre;
