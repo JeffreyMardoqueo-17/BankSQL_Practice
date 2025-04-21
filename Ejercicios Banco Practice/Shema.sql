@@ -12,7 +12,7 @@ CREATE TABLE Clientes (
     Estado BIT -- 1 = Activo, 0 = Inactivo
 );
 
--- 2. Cuentas
+------------- 2. Cuentas
 CREATE TABLE Cuentas (
     CuentaID INT PRIMARY KEY IDENTITY,
     ClienteID INT FOREIGN KEY REFERENCES Clientes(ClienteID),
@@ -22,7 +22,7 @@ CREATE TABLE Cuentas (
     Activa BIT -- 1 = Activa, 0 = Cerrada
 );
 
--- 3. Transacciones
+-------------- 3. Transacciones
 CREATE TABLE Transacciones (
     TransaccionID INT PRIMARY KEY IDENTITY,
     CuentaID INT FOREIGN KEY REFERENCES Cuentas(CuentaID),
@@ -31,7 +31,7 @@ CREATE TABLE Transacciones (
     Fecha DATETIME DEFAULT GETDATE()
 );
 
--- 4. Empleados (para auditoría)
+---------------------- 4. Empleados (para auditoría)
 CREATE TABLE Empleados (
     EmpleadoID INT PRIMARY KEY IDENTITY,
     Nombre NVARCHAR(100),

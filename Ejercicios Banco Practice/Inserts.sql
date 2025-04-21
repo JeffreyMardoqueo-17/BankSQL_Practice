@@ -4,13 +4,13 @@ INSERT INTO Clientes (Nombre, Correo, FechaRegistro, Estado) VALUES
 ('Ana Morales', 'ana.morales@email.com', '2024-02-10', 1),
 ('Luis Torres', 'luis.torres@email.com', '2023-12-01', 0);
 GO
-----INSERT DE CUENTAS
+----INSERT DE CUENTASS
 INSERT INTO Cuentas (ClienteID, NumeroCuenta, TipoCuenta, Saldo, Activa) VALUES
 (1, '0000123456', 'Ahorros', 1500.00, 1),
 (1, '0000123457', 'Corriente', 500.00, 1),
 (2, '0000123458', 'Ahorros', 3000.00, 1),
 (3, '0000123459', 'Corriente', 0.00, 0);
------INSERT  DE TRANSACCIONES
+-----INSERT  DE Transacciones
 GO
 INSERT INTO Transacciones (CuentaID, Tipo, Monto) VALUES
 (1, 'Depósito', 1000.00),
